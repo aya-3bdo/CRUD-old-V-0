@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <title> CRUD </title>
+      <link rel="stylesheet" href="crud.css">
+  </head>
+  <body>
+
+    <div class="container">      <!-- The container -->
+
+  <div class="header">    <!-- The head parent -->
+    <h1> CRUD </h1>
+    <p> create read update delete </p>
+  </div>
+
+
+  <div class="input">     <!-- The inputs parent -->
+    <input id="title" class="tcs" type="text" placeholder="Title">
+    <div class="clacsInputs">
+      <input id="price" onkeyup= "getTotal()"  class="ptd" type="number" placeholder="Price">
+      <input id="tax"  onkeyup="getTotal()"  class="ptd" type="number" placeholder="Tax">
+    <input id="discount" onkeyup="getTotal()"  class="ptd" type="number" placeholder="Discount">
+      <small id="total" >   $$  </small>
+    </div>
+
+    <input id="itemsNum" onkeyup="getTotal()" type="number" placeholder="Items number">
+    <input id="category"  class="tcs" type="text" placeholder="Category">
+    <button class="tcs" onclick="subm()" id="submit" type="button" name="button"> Create</button>
+  </div>
+
+
+  <div class="middle">
+  <button  class="tcs"  id="clearr" type="button" name="button"> Delete all</button>
+</div>
+
+    <div class="sear">
+
+    <input onclick="sea(this.id)" id="name" type="text"  placeholder="search by name">
+    <input onclick="sea(this.id)" id="catego"   type="text" placeholder="search by category">
+  </div>
+
+
+  <div  class="output">    <!-- The outputs parent -->
+
+    <table>
+
+<thead>
+  <th>id</th>
+  <th>Title</th>
+  <th>price</th>
+  <th>Taxes</th>
+  <th>Discounts</th>
+  <th>Total</th>
+  <th>Items Number</th>
+  <th>Category</th>
+  <th>Update</th>
+  <th>Delete</th>
+
+</thead>
+
+<tbody id="tbody">
+</tbody>
+
+</table>
+
+<div  class="distanse">
+</div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+<script type="text/javascript" src="crud.js">
+</script>
+
+  </body>
+</html>
